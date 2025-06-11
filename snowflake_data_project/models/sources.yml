@@ -3,7 +3,7 @@ sources:
     database: finance_db
     schema: raw
     tables:
-    - name: customers
+    - name: customer
     - name: orders
     - name: products
     - name: order_items
