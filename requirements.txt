@@ -1,0 +1,6 @@
+apache-airflow>=2.0.0,<3
+apache-airflow-providers-snowflake
+dbt-core>=1.4.0
+dbt-snowflake
+pydantic>=1.10.4
+snowflake-connector-python

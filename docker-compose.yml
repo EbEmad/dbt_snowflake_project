@@ -1,0 +1,46 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+
+  webserver:
+    build: .
+    restart: always
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
+      - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
+      - DBT_PROFILES_DIR=/opt/airflow/snowflake_data_project/profiles
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./snowflake_data_project:/opt/airflow/snowflake_data_project
+      - /home/ebrahim/.dbt:/home/airflow/.dbt
+      - ./dbt_airflow:/opt/airflow/dbt_airflow
+    ports:
+      - "8080:8080"
+    entrypoint: /run.sh
+    command: webserver
+
+  scheduler:
+    build: .
+    restart: always
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
+      - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
+      - DBT_PROFILES_DIR=/opt/airflow/snowflake_data_project/profiles
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./snowflake_data_project:/opt/airflow/snowflake_data_project
+      - /home/ebrahim/.dbt:/home/airflow/.dbt
+      - ./dbt_airflow:/opt/airflow/dbt_airflow
+    entrypoint: /run.sh
+    command: scheduler

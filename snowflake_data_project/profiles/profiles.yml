@@ -1,0 +1,14 @@
+snowflake_data_project:
+  outputs:
+    dev:
+      account: ei21228.eu-central-2.aws
+      database: finance_db
+      password: dbt_password
+      role: ACCOUNTADMIN
+      schema: raw
+      threads: 1
+      type: snowflake
+      user: dbt_user
+      warehouse: finance_wh
+  target: dev
+

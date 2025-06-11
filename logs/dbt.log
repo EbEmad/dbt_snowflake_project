@@ -1,114 +1,167 @@
-[0m22:34:21.762431 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e7878da06b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e787931e360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e78793f4bc0>]}
+[0m15:45:06.789735 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x712bb3b2e490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x712bb3b2e090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x712bb3b2ef90>]}
 
 
-============================== 22:34:21.765812 | f5f8a6be-08c2-47b3-9094-5369cbdcd452 ==============================
-[0m22:34:21.765812 [info ] [MainThread]: Running with dbt=1.9.8
-[0m22:34:21.766219 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/home/ebrahim/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt init snowflake_data_project', 'send_anonymous_usage_stats': 'True'}
-[0m22:34:21.779661 [debug] [MainThread]: Starter project path: /home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/include/starter_project
-[0m22:34:21.782741 [info ] [MainThread]: 
-Your new dbt project "snowflake_data_project" was created!
+============================== 15:45:06.795083 | 3ffdbc08-87ce-4bbc-928d-7e522c1cf16c ==============================
+[0m15:45:06.795083 [info ] [MainThread]: Running with dbt=1.5.11
+[0m15:45:06.795659 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m15:45:06.796161 [info ] [MainThread]: dbt version: 1.5.11
+[0m15:45:06.796544 [info ] [MainThread]: python version: 3.7.16
+[0m15:45:06.796918 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m15:45:06.797240 [info ] [MainThread]: os info: Linux-6.8.0-60-generic-x86_64-with-debian-11.6
+[0m15:45:06.797544 [info ] [MainThread]: Using profiles.yml file at /home/airflow/.dbt/profiles.yml
+[0m15:45:06.797845 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_project.yml
+[0m15:45:06.798181 [info ] [MainThread]: Configuration:
+[0m15:45:06.802801 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m15:45:07.350626 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m15:45:07.351355 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m15:45:07.351778 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:45:07.352157 [info ] [MainThread]: Required dependencies:
+[0m15:45:07.352509 [debug] [MainThread]: Executing "git --help"
+[0m15:45:07.361453 [info ] [MainThread]:  - git [[31mERROR[0m]
 
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
+[0m15:45:07.362156 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m15:45:07.362488 [info ] [MainThread]: Could not load dbt_project.yml
 
-  https://docs.getdbt.com/docs/configure-your-profile
+[0m15:45:07.362811 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "dbt_init", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
 
-One more thing:
-
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
-
-  https://community.getdbt.com/
-
-Happy modeling!
-
-[0m22:34:21.783114 [info ] [MainThread]: Setting up your profile.
-[0m07:12:51.757855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71cba9c7c530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71cbaa091e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71cbaa4f89e0>]}
-
-
-============================== 07:12:51.764090 | b36e1a4e-9d73-42eb-881f-4054a242379c ==============================
-[0m07:12:51.764090 [info ] [MainThread]: Running with dbt=1.9.8
-[0m07:12:51.765186 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/ebrahim/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init snowflake_data_project', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
-[0m07:12:51.790659 [debug] [MainThread]: Starter project path: /home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/include/starter_project
-[0m07:12:51.796484 [info ] [MainThread]: 
-Your new dbt project "snowflake_data_project" was created!
-
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
-
-  https://docs.getdbt.com/docs/configure-your-profile
-
-One more thing:
-
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
-
-  https://community.getdbt.com/
-
-Happy modeling!
-
-[0m07:12:51.797152 [info ] [MainThread]: Setting up your profile.
-[0m07:15:08.075216 [error] [MainThread]: Encountered an error:
-
-[0m07:15:08.091442 [error] [MainThread]: Traceback (most recent call last):
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
-    result, success = func(*args, **kwargs)
-                      ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
-    return func(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/cli/main.py", line 477, in init
-    results = task.run()
-              ^^^^^^^^^^
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
-    self.setup_profile(profile_name)
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/task/init.py", line 262, in setup_profile
-    self.create_profile_from_target(adapter, profile_name=profile_name)
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
-    self.create_profile_from_profile_template(profile_template, profile_name)
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
-    target = self.generate_target_from_input(prompts, initial_target)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
-    target[key] = click.prompt(
-                  ^^^^^^^^^^^^^
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/click/termui.py", line 168, in prompt
-    value = prompt_func(prompt)
-            ^^^^^^^^^^^^^^^^^^^
-  File "/home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/click/termui.py", line 151, in prompt_func
-    raise Abort() from None
-click.exceptions.Abort
-
-[0m07:15:08.093770 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 136.41258, "process_in_blocks": "83192", "process_kernel_time": 0.409699, "process_mem_max_rss": "118260", "process_out_blocks": "80", "process_user_time": 2.186735}
-[0m07:15:08.094908 [debug] [MainThread]: Command `dbt init` failed at 07:15:08.094757 after 136.41 seconds
-[0m07:15:08.095695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71cbaa2c7350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71cba8b86ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x71cba85c2f90>]}
-[0m07:15:08.096653 [debug] [MainThread]: Flushing usage events
-[0m07:15:09.599556 [debug] [MainThread]: An error was encountered while trying to flush usage events
-[0m07:15:26.299955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73475a4f5ac0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73475abe0350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73475a211160>]}
+Runtime Error
+  Credentials in profile "test_profile", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
 
 
-============================== 07:15:26.304487 | fd67d055-93dd-48b6-8c6c-a25b51594544 ==============================
-[0m07:15:26.304487 [info ] [MainThread]: Running with dbt=1.9.8
-[0m07:15:26.305442 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/home/ebrahim/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt init snowflake_data_project', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
-[0m07:15:26.321787 [debug] [MainThread]: Starter project path: /home/ebrahim/dbt_snowflake_project/env/lib/python3.12/site-packages/dbt/include/starter_project
-[0m07:15:26.326529 [info ] [MainThread]: 
-Your new dbt project "snowflake_data_project" was created!
+[0m15:45:07.363221 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
 
-For more information on how to configure the profiles.yml file,
-please consult the dbt documentation here:
+[0m15:45:07.363926 [debug] [MainThread]: Command `dbt debug` failed at 15:45:07.363799 after 0.59 seconds
+[0m15:45:07.364407 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x712bb5cb9490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x712b80af3690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x712b80af3510>]}
+[0m15:45:07.364825 [debug] [MainThread]: Flushing usage events
+[0m18:15:57.082181 [debug] [MainThread]: Got an exception trying to initialize tracking
 
-  https://docs.getdbt.com/docs/configure-your-profile
 
-One more thing:
+============================== 18:15:57.093174 | 6736c7ed-9964-4019-b1c7-052db3163f9f ==============================
+[0m18:15:57.093174 [info ] [MainThread]: Running with dbt=1.5.11
+[0m18:15:57.094005 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/snowflake_data_project/profiles', 'debug': 'False', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m18:15:57.094542 [info ] [MainThread]: dbt version: 1.5.11
+[0m18:15:57.094897 [info ] [MainThread]: python version: 3.7.16
+[0m18:15:57.095211 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m18:15:57.095510 [info ] [MainThread]: os info: Linux-6.8.0-60-generic-x86_64-with-debian-11.6
+[0m18:15:57.095807 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/snowflake_data_project/profiles/profiles.yml
+[0m18:15:57.096111 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_project.yml
+[0m18:15:57.096403 [info ] [MainThread]: Configuration:
+[0m18:15:57.101570 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m18:15:57.645391 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.postgres'
+[0m18:15:57.646128 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m18:15:57.646506 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m18:15:57.646882 [info ] [MainThread]: Required dependencies:
+[0m18:15:57.647259 [debug] [MainThread]: Executing "git --help"
+[0m18:15:57.654906 [info ] [MainThread]:  - git [[31mERROR[0m]
 
-Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+[0m18:15:57.655698 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m18:15:57.656073 [info ] [MainThread]: Could not load dbt_project.yml
 
-  https://community.getdbt.com/
+[0m18:15:57.656428 [info ] [MainThread]: Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "dbt_init", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
 
-Happy modeling!
+Runtime Error
+  Credentials in profile "test_profile", target "dev" invalid: Runtime Error
+    Could not find adapter type postgres!
 
-[0m07:15:26.327201 [info ] [MainThread]: Setting up your profile.
-[0m07:25:56.107006 [info ] [MainThread]: Profile snowflake_data_project written to /home/ebrahim/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
-[0m07:25:56.109526 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 629.8865, "process_in_blocks": "0", "process_kernel_time": 0.334533, "process_mem_max_rss": "118292", "process_out_blocks": "88", "process_user_time": 2.111053}
-[0m07:25:56.110644 [debug] [MainThread]: Command `dbt init` succeeded at 07:25:56.110490 after 629.89 seconds
-[0m07:25:56.111269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73475aa90c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x73475900ec30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x734758ae79b0>]}
-[0m07:25:56.111985 [debug] [MainThread]: Flushing usage events
-[0m07:25:57.563254 [debug] [MainThread]: An error was encountered while trying to flush usage events
+
+[0m18:15:57.656781 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m18:15:57.657493 [debug] [MainThread]: Command `dbt debug` failed at 18:15:57.657371 after 0.59 seconds
+[0m18:15:57.657884 [debug] [MainThread]: Flushing usage events
+[0m19:02:00.197435 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 19:02:00.208158 | 64afc972-b8dc-4484-9181-11ac2346b572 ==============================
+[0m19:02:00.208158 [info ] [MainThread]: Running with dbt=1.5.11
+[0m19:02:00.209299 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/snowflake_data_project/profiles', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:02:00.209949 [info ] [MainThread]: dbt version: 1.5.11
+[0m19:02:00.210291 [info ] [MainThread]: python version: 3.7.16
+[0m19:02:00.210624 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:02:00.210943 [info ] [MainThread]: os info: Linux-6.8.0-60-generic-x86_64-with-debian-11.6
+[0m19:02:00.211260 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/snowflake_data_project/profiles/profiles.yml
+[0m19:02:00.211586 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_project.yml
+[0m19:02:00.211905 [info ] [MainThread]: Configuration:
+[0m19:02:00.909167 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:02:00.909750 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:02:00.910180 [info ] [MainThread]: Required dependencies:
+[0m19:02:00.910608 [debug] [MainThread]: Executing "git --help"
+[0m19:02:00.918750 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m19:02:00.919482 [info ] [MainThread]: Connection:
+[0m19:02:00.919849 [info ] [MainThread]:   account: ei21228.eu-central-2.aws
+[0m19:02:00.920142 [info ] [MainThread]:   user: dbt_user
+[0m19:02:00.920422 [info ] [MainThread]:   database: finance_db
+[0m19:02:00.920712 [info ] [MainThread]:   schema: raw
+[0m19:02:00.920987 [info ] [MainThread]:   warehouse: finance_wh
+[0m19:02:00.921262 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m19:02:00.921567 [info ] [MainThread]:   client_session_keep_alive: False
+[0m19:02:00.921874 [info ] [MainThread]:   query_tag: None
+[0m19:02:00.922987 [info ] [MainThread]: Registered adapter: snowflake=1.5.1
+[0m19:02:00.923855 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m19:02:00.924658 [debug] [MainThread]: Using snowflake connection "debug"
+[0m19:02:00.924939 [debug] [MainThread]: On debug: select 1 as id
+[0m19:02:00.925190 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:02:03.062502 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m19:02:03.063692 [debug] [MainThread]: On debug: Close
+[0m19:02:04.092273 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:02:04.092818 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m19:02:04.093136 [info ] [MainThread]: Could not load dbt_project.yml
+
+[0m19:02:04.093427 [info ] [MainThread]: Error from git --help: User does not have permissions for this command: "git"
+
+[0m19:02:04.094027 [debug] [MainThread]: Command `dbt debug` failed at 19:02:04.093929 after 3.90 seconds
+[0m19:02:04.094330 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:02:04.094602 [debug] [MainThread]: Flushing usage events
+[0m19:21:37.772742 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 19:21:37.784531 | 200efc0c-af15-496f-b13f-cd4218ee78e8 ==============================
+[0m19:21:37.784531 [info ] [MainThread]: Running with dbt=1.5.11
+[0m19:21:37.785438 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/opt/airflow/snowflake_data_project/profiles', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m19:21:37.785995 [info ] [MainThread]: dbt version: 1.5.11
+[0m19:21:37.786367 [info ] [MainThread]: python version: 3.7.16
+[0m19:21:37.786730 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m19:21:37.787063 [info ] [MainThread]: os info: Linux-6.8.0-60-generic-x86_64-with-debian-11.6
+[0m19:21:37.787391 [info ] [MainThread]: Using profiles.yml file at /opt/airflow/snowflake_data_project/profiles/profiles.yml
+[0m19:21:37.787724 [info ] [MainThread]: Using dbt_project.yml file at /opt/airflow/dbt_project.yml
+[0m19:21:37.788045 [info ] [MainThread]: Configuration:
+[0m19:21:38.327596 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:21:38.328138 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m19:21:38.328582 [info ] [MainThread]: Required dependencies:
+[0m19:21:38.329045 [debug] [MainThread]: Executing "git --help"
+[0m19:21:38.346874 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:21:38.347687 [debug] [MainThread]: STDERR: "b''"
+[0m19:21:38.348020 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:21:38.348353 [info ] [MainThread]: Connection:
+[0m19:21:38.348765 [info ] [MainThread]:   account: ei21228.eu-central-2.aws
+[0m19:21:38.349110 [info ] [MainThread]:   user: dbt_user
+[0m19:21:38.349439 [info ] [MainThread]:   database: finance_db
+[0m19:21:38.349773 [info ] [MainThread]:   schema: raw
+[0m19:21:38.350085 [info ] [MainThread]:   warehouse: finance_wh
+[0m19:21:38.350356 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m19:21:38.350644 [info ] [MainThread]:   client_session_keep_alive: False
+[0m19:21:38.350923 [info ] [MainThread]:   query_tag: None
+[0m19:21:38.351610 [info ] [MainThread]: Registered adapter: snowflake=1.5.1
+[0m19:21:38.352293 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m19:21:38.353006 [debug] [MainThread]: Using snowflake connection "debug"
+[0m19:21:38.353249 [debug] [MainThread]: On debug: select 1 as id
+[0m19:21:38.353478 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:21:40.042181 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m19:21:40.043990 [debug] [MainThread]: On debug: Close
+[0m19:21:40.249327 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m19:21:40.250117 [info ] [MainThread]: [31m1 check failed:[0m
+[0m19:21:40.250723 [info ] [MainThread]: Could not load dbt_project.yml
+
+[0m19:21:40.251638 [debug] [MainThread]: Command `dbt debug` failed at 19:21:40.251467 after 2.49 seconds
+[0m19:21:40.252106 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m19:21:40.252520 [debug] [MainThread]: Flushing usage events
