@@ -1,0 +1,9 @@
+sources:
+  - name: raw_data
+    database: finance_db
+    schema: raw
+    tables:
+    - name: customers
+    - name: orders
+    - name: products
+    - name: order_items
