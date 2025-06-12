@@ -16,6 +16,7 @@ services:
       - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
       - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
       - DBT_PROFILES_DIR=/opt/airflow/snowflake_data_project/profiles
+      - PYTHONPATH=/opt/airflow
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
@@ -36,6 +37,7 @@ services:
       - AIRFLOW__WEBSERVER__SECRET_KEY=mysecretkey
       - AIRFLOW__CORE__FERNET_KEY=GgyJ5jUehSy2zQqY958eUWW1ezEgNp4OerBy-AKuD14=
       - DBT_PROFILES_DIR=/opt/airflow/snowflake_data_project/profiles
+      - PYTHONPATH=/opt/airflow
     volumes:
       - ./dags:/opt/airflow/dags
       - ./logs:/opt/airflow/logs
